@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  
+  <script type="text/javascript" src="index1.js"></script>
+  
+</head>
+<body>
+  <main role="main" class="whitearea">
+    <div class="formarea">
+      <form action="" name="myform" method="GET">
+        <div class="forbill">
+          <label>Bill: <br><br>
+          <input class= "Bill" type="text" name="majorbill" onfocus="this.value=''" placeholder="" required>
+          </label><br><br>
+        </div>
+        <p class="selectip">Select Tip %</p>
+        <div class="forsubmit">
+          <button class="for5" type="submit" onclick="myfunction(this.form)">5%</button>
+          <button class="for5" type="submit" onclick="myfunction(this.form)">10%</button>
+          <button class="for5" type="submit" onclick="myfunction(this.form)">15%</button>
+          <button class="for5" type="submit" onclick="myfunction(this.form)">25%</button>
+          <button class="for5" type="submit" onclick="myfunction(this.form)">50%</button>
+          <button class="forcustom" type="submit" onclick="myfunction(form)">Custom</button>
+        </div>
+
+
+        <div class="fornumber">
+          <label>Number of people: <br><br>
+          <input class= "number" type="text" name="majornumber" onfocus="this.value=''" placeholder="0" required>
+          </label>
+        </div>
+      </form>
+  </div>
+  <div class="darkarea">
+    <section class="tiparea">
+      <p>Tip Amount<br>
+      <span>/ person</span></p>
+    </section>
+
+    <section class="totalarea">
+      <p>Total<br>
+     <span>/ person</span></p>
+    </section>
+    <section class="tip">
+      <p> $0.00</p>
+    </section>
+
+    <section class="total">
+      <p> $0.00</p>
+    </section>
+
+    <button class="reset" onmouseover="">RESET</button>
+
+    <!--<p>a parallelogram</p>-->
+  </div> 
+
+</main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Saviodev</a>.
+  </div>
+</body>
+</html>
