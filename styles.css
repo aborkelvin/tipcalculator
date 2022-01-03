@@ -29,40 +29,46 @@
         border-radius: 13px;
     }
 
+    input[type = text]{
+        background-color:hsl(189, 41%, 97%);
+        border-radius: 5px;
+        resize: none;
+        padding: 2px 20px 2px 4px;
+        text-align: right;
+    }
+
     .Bill{
         padding-left: 20px;
-        background-color: hsl(189, 41%, 97%);
         width: 280px;
-        height: 35px;
-        border-radius: 5%;
+        height: 35px;    
         border: none;
         background: url(images/icon-dollar.svg)no-repeat;
         background-size: 15px;
+        background-position:10px 7px;
     }
     .number{
-        padding: 5px;
-        background-color: hsl(189, 41%, 97%);
+        /*padding: 5px;*/
         width: 280px;
         height: 35px;
-        border-radius: 5%;
         border: none;
         background: url(images/icon-person.svg)no-repeat;
+        background-position:12px 12px;
         background-size: 15px;
     }
 
     .Bill:hover{
         border: 2px solid hsl(172, 67%, 45%);
     }
-    .Bill:active{
+    /*.Bill:active{
         border:2px solid hsl(172, 67%, 45%);
-    }
+    }*/
 
     .number:hover{
         border: 2px solid hsl(172, 67%, 45%);
     }
-    .number:active{
-        border:2px solid hsl(172, 67%, 45%);
-    }
+    /*.number:active{
+        border:2px solid hsl(172, 67%, 45%); //The focus seems to be doing their functions
+    }*/
 
     input:focus{
         outline: hsl(172, 67%, 45%);
@@ -93,9 +99,10 @@
     .forcustom{
         border-radius: 10%;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
         border: none;
         color:hsl(186, 14%, 43%);
+        background-color: hsl(189, 41%, 97%);
     }
 
     .fornumber{
