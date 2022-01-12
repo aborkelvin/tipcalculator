@@ -28,6 +28,20 @@
         height: 340px;
         border-radius: 13px;
     }
+    
+    #check{
+        color: red;
+        position: absolute;
+        top:20px;
+        left:165px;
+    }
+    
+    #check2{
+        color: red;
+        position: absolute;
+        bottom:40px;
+        left:200px;
+    }
 
     input[type = text]{
         background-color:hsl(189, 41%, 97%);
@@ -132,7 +146,7 @@
         background-color: hsl(172, 67%, 45%);/*this will have to be checked 
         and improved for the different states*/
         border:none;
-        border-radius: 5%;
+        border-radius: 5px;
     }
     span{
         font-size: 10px;
