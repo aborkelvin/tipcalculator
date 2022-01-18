@@ -15,7 +15,7 @@
   <main role="main" class="whitearea">
     <div class="formarea">
       <br>
-      <form action="" name="myform" method="GET" autocomplete="off">
+      <form action="" name="myform" id="myform" method="GET" autocomplete="off">
         <div class="forbill">
           <label>Bill: </label><br><br> 
           <p id='check'></p>
@@ -25,13 +25,14 @@
         <p class="selectip">Select Tip %</p>
         <div class="forsubmit">
           <button class="for5" type="button" onclick="fivepercent()">5%</button>
-          <button class="for5" type="button" onclick="myfunction()">10%</button>
-          <button class="for5" type="button" onclick="myfunction()">15%</button>
-          <button class="for5" type="button" onclick="myfunction()">25%</button>
-          <button class="for5" type="button" onclick="myfunction()">50%</button>
-          <button class="forcustom" type="button" onclick="myfunction()">Custom</button>
+          <button class="for5" type="button" onclick="tenpercent()">10%</button>
+          <button class="for5" type="button" onclick="fifteenpercent()">15%</button>
+          <button class="for5" type="button" onclick="twentyfivep()">25%</button>
+          <button class="for5" type="button" onclick="fiftyp()">50%</button>
+          <button class="forcustom" id = "ugbo" type="button" onclick="customize()">Custom</button>
+          <input class="focustom" id = "fada" type = "text" value = "" onchange="ishi()" onfocus="this.value=''" name= "focustom">
         </div>
-
+        <p id="teej"></p>
 
         <div class="fornumber">
           <label>Number of people: </label><br><br>
@@ -58,7 +59,7 @@
         <p id="Ttpp"> $0.00</p>
       </section>
 
-      <button class="reset" onmouseover="">RESET</button>
+      <button type ="reset" id="reset" onclick="window.location.reload()">RESET</button>
 
       <!--<p>a parallelogram</p>-->
     </div> 
