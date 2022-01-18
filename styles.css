@@ -39,8 +39,13 @@
     #check2{
         color: red;
         position: absolute;
-        bottom:40px;
-        left:200px;
+        bottom: 45px;
+        left:205px;
+    }
+
+    #teej{
+        color: red;
+        position: absolute;bottom: 110px; left: 130px;
     }
 
     input[type = text]{
@@ -68,6 +73,16 @@
         background: url(images/icon-person.svg)no-repeat;
         background-position:12px 12px;
         background-size: 15px;
+    }
+
+    .badnumber{
+        width: 280px;
+        height: 35px;
+        border-color: red;
+        background: url(images/icon-person.svg)no-repeat;
+        background-position:12px 12px;
+        background-size: 15px;
+
     }
 
     .Bill:hover{
@@ -110,6 +125,16 @@
         font-size: 16px;
         font-weight: 600;
     }
+
+    .for5:hover{
+        background-color: hsl(172, 67%, 45%);
+    }
+
+    .for5:focus{
+        background-color: hsl(172, 67%, 45%);
+        outline: hsl(172, 67%, 45%);
+    }
+
     .forcustom{
         border-radius: 10%;
         font-size: 18px;
@@ -120,7 +145,7 @@
     }
 
     .fornumber{
-        position: absolute; bottom: 50px;left: 22px;
+        position: absolute; bottom: 40px;left: 22px;
     }
     .selectip{
         color: hsl(186, 14%, 43%);
@@ -133,16 +158,16 @@
         color: white;
     }
     section.tiparea{
-        position: relative;top: 30px; left: 20px;
+        position: relative;top: 30px; left: 30px;
         font-size: 15px;
     }
     section.totalarea{
-        position: relative;top: 60px; left: 20px;
+        position: relative;top: 60px; left: 30px;
         font-size: 15px;
     }
-    .reset{
-        position: relative;top: 10px;left: 50px;
-        width: 250px;height: 40px;
+    #reset{
+        position: absolute;bottom: 80px;right: 60px;
+        width: 280px;height: 40px;
         background-color: hsl(172, 67%, 45%);/*this will have to be checked 
         and improved for the different states*/
         border:none;
@@ -155,7 +180,7 @@
     section.tip{
         float: right;
         color:hsl(172, 67%, 45%);
-        position: relative;bottom:120px;right:60px;
+        position: absolute;bottom:245px;right:60px;
         font-size: 40px;
         border: none;
         margin:0px;
@@ -166,7 +191,7 @@
     section.total{
         float: right;
         color:hsl(172, 67%, 45%);
-        position: absolute;bottom:165px;right:82px;
+        position: absolute;bottom:165px;right:60px;
         font-size: 40px;
         border: none;
         margin:0px;
@@ -176,4 +201,13 @@
 
     section{
         font-weight:600 ;
+    }
+
+    .focustom{
+        display:none;
+    }
+
+    #fada{
+        /*display: inherit;*/
+        border: 2px solid hsl(172, 67%, 45%);
     }
