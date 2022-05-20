@@ -27,8 +27,7 @@
         gap: 20px;
     } 
     .formarea{
-        max-width: 310px;
-        background-color: rgb(133, 163, 161);
+        width: 310px;
         min-height: 350px;
         position: relative;
     }
@@ -133,7 +132,6 @@
     .for5{
         border-radius: 10%;
         border:none;
-        /*font-size: 24px;*/
         background-color: hsl(183, 100%, 15%);
         color: white;
         font-size: 16px;
@@ -218,9 +216,6 @@
     }
 
     @media screen and (max-width:650px)  {
-        body{
-            background-color: grey;
-        }
         .whitearea{
             flex-direction: column;
             justify-content: space-evenly;
