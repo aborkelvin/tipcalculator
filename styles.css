@@ -1,51 +1,69 @@
-
     .attribution { 
         font-size: 12px; text-align: center;
-        position: absolute; bottom:0px;left:100px;
+        position: absolute; bottom:0px;left:0px;
     }
     .attribution a { color: hsl(228, 45%, 44%); }
     
     body{
-        width: 1440px;
+        width: 100vw;
+        margin: 0;
+        height: 100vh;
         background-color: hsl(185, 41%, 84%);
         font-family: monospace;
+        display: flex;
+        align-items: center;
     }
+
     .whitearea{
         background-color: hsl(0, 0%, 100%);
-        width: 700px;
-        height: 350px;
-        position: relative; top: 200px;left: 400px;
-        border-radius: 5%;
+        max-width: 650px;
+        min-height: 350px;
+        margin: auto;
         padding: 20px;
+        border-radius: 5%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 20px;
     } 
     .formarea{
-        float:left;
+        max-width: 310px;
+        background-color: rgb(133, 163, 161);
+        min-height: 350px;
+        position: relative;
     }
+
     .darkarea{
-        float: right;
         background-color: hsl(183, 100%, 15%);
-        width: 350px;
+        width: 310px;
         height: 340px;
         border-radius: 13px;
+        position: relative;
+    }
+
+    
+    .fornumber{
+        position: absolute; bottom: 10px;left: 0px;
+        width: 100%;
     }
     
     #check{
         color: red;
         position: absolute;
-        top:20px;
-        left:165px;
+        top:0px;
+        left:120px;
     }
     
     #check2{
         color: red;
         position: absolute;
-        bottom: 45px;
-        left:205px;
+        bottom: 40px;
+        left:190px;
     }
 
     #teej{
         color: red;
-        position: absolute;bottom: 110px; left: 130px;
+        position: absolute;bottom: 70px; left: 100px;
     }
 
     input[type = text]{
@@ -58,7 +76,9 @@
 
     .Bill{
         padding-left: 20px;
-        width: 280px;
+        width: clamp(220px,100%,265px);
+        display: block;
+        /* margin: 0 auto; */
         height: 35px;    
         border: none;
         background: url(images/icon-dollar.svg)no-repeat;
@@ -66,8 +86,7 @@
         background-position:10px 7px;
     }
     .number{
-        /*padding: 5px;*/
-        width: 280px;
+        width: clamp(220px,100%,270px);
         height: 35px;
         border: none;
         background: url(images/icon-person.svg)no-repeat;
@@ -76,7 +95,7 @@
     }
 
     .badnumber{
-        width: 280px;
+        width: clamp(220px,100%,265px);
         height: 35px;
         border-color: red;
         background: url(images/icon-person.svg)no-repeat;
@@ -88,16 +107,11 @@
     .Bill:hover{
         border: 2px solid hsl(172, 67%, 45%);
     }
-    /*.Bill:active{
-        border:2px solid hsl(172, 67%, 45%);
-    }*/
 
     .number:hover{
         border: 2px solid hsl(172, 67%, 45%);
     }
-    /*.number:active{
-        border:2px solid hsl(172, 67%, 45%); //The focus seems to be doing their functions
-    }*/
+    
 
     input:focus{
         outline: hsl(172, 67%, 45%);
@@ -109,11 +123,11 @@
 
     .forsubmit{
         display: grid;
-        grid-template-columns: 85px 85px 85px;
+        grid-template-columns: repeat(3,85px);
         grid-template-rows: 35px 35px;
         grid-gap: 20px;
         font-size: 24px;
-       /* border-radius:;*/
+        max-width: 100%;
     }
 
     .for5{
@@ -144,16 +158,10 @@
         background-color: hsl(189, 41%, 97%);
     }
 
-    .fornumber{
-        position: absolute; bottom: 40px;left: 22px;
-    }
     .selectip{
         color: hsl(186, 14%, 43%);
     }
-    /*.for10{border-radius: 10%;}
-    .for15{border-radius: 10%;}
-    .for25{border-radius: 10%;}
-    .for50{border-radius: 10%;}*/
+    
     section{
         color: white;
     }
@@ -166,7 +174,9 @@
         font-size: 15px;
     }
     #reset{
-        position: absolute;bottom: 80px;right: 60px;
+        display: block;
+        margin: 0 auto;
+        position: absolute;bottom: 40px;left: 15px; 
         width: 280px;height: 40px;
         background-color: hsl(172, 67%, 45%);/*this will have to be checked 
         and improved for the different states*/
@@ -178,25 +188,21 @@
         font-weight: 400;
     }
     section.tip{
-        float: right;
-        color:hsl(172, 67%, 45%);
-        position: absolute;bottom:245px;right:60px;
-        font-size: 40px;
-        border: none;
-        margin:0px;
-        padding:0px;
-        font-weight: 600;
+        bottom:215px;
     }
-
-    section.total{
-        float: right;
+    
+    .results{
         color:hsl(172, 67%, 45%);
-        position: absolute;bottom:165px;right:60px;
         font-size: 40px;
         border: none;
         margin:0px;
         padding:0px;
         font-weight: 600;
+        position: absolute;
+        right:20px;
+    }
+    section.total{
+        bottom:135px;
     }
 
     section{
@@ -208,6 +214,29 @@
     }
 
     #fada{
-        /*display: inherit;*/
         border: 2px solid hsl(172, 67%, 45%);
+    }
+
+    @media screen and (max-width:650px)  {
+        body{
+            background-color: grey;
+        }
+        .whitearea{
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        
+        .formarea{
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        .darkarea{
+            margin: 0 auto;
+        }
+        
+    }
+
+    @media screen and (min-width:650px){
     }
